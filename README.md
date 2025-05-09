@@ -22,10 +22,9 @@ The encoder (`ResNet-18`) is trained on the **unlabeled split** of STL-10 using 
 ### Loss Function
 
 We use the InfoNCE loss:
-
-$$
+```math
 \mathcal{L}_{i,j} = -\log \frac{\exp(\text{sim}(z_i, z_j)/\tau)}{\sum_{k=1}^{2N} \mathbb{1}_{k \ne i} \exp(\text{sim}(z_i, z_k)/\tau)}
-$$
+```
 where sim is cosine similarity and $\tau$ is the temperature.
 
 ### Data Augmentations
